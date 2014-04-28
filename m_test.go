@@ -10,8 +10,7 @@ func check(t *testing.T, a, b, c int) {
     big_a := big.NewInt(int64(a))
     big_b := big.NewInt(int64(b))
     big_c := big.NewInt(int64(c))
-    z := new(big.Int)
-    z.Exp(big_a, big_b, big_c)
+    z := new(big.Int).Exp(big_a, big_b, big_c)
     got := MontgomeryLadderExp(big_a, big_b, big_c)
     if (got.Cmp(z) != 0) {
         t.Errorf("pow(%d, %d, %d) Expected: %s, got %s", a, b, c, z.String(), got.String())
