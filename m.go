@@ -24,6 +24,7 @@ func MontgomeryLadderExp(a, b, c *big.Int) *big.Int {
                     break
                 }
             }
+            // Also skip the first bit.
             i--
         }
         for ; i >= 0; i-- {
