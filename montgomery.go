@@ -17,7 +17,7 @@ func MontgomeryLadderExp(a, b, c *big.Int) *big.Int {
 
 	a1 := new(big.Int).Set(a)
 	a2 := new(big.Int).Mul(a, a)
-	for pos := b.BitLen() - 1; pos >= 0; pos-- {
+	for pos := b.BitLen() - 2; pos >= 0; pos-- {
 		if b.Bit(pos) == 0 {
 			a2.Mul(a2, a1)
 			a1.Mul(a1, a1)
