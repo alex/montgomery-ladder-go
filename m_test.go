@@ -6,11 +6,11 @@ import (
 )
 
 func check(t *testing.T, a, b, c int) {
-	big_a := big.NewInt(int64(a))
-	big_b := big.NewInt(int64(b))
-	big_c := big.NewInt(int64(c))
-	z := new(big.Int).Exp(big_a, big_b, big_c)
-	got := MontgomeryLadderExp(big_a, big_b, big_c)
+	bigA := big.NewInt(int64(a))
+	bigB := big.NewInt(int64(b))
+	bigC := big.NewInt(int64(c))
+	z := new(big.Int).Exp(bigA, bigB, bigC)
+	got := MontgomeryLadderExp(bigA, bigB, bigC)
 	if got.Cmp(z) != 0 {
 		t.Errorf("pow(%d, %d, %d) Expected: %s, got %s", a, b, c, z.String(), got.String())
 	}
