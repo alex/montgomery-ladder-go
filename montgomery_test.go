@@ -19,7 +19,9 @@ func check(t *testing.T, a, b, c int) {
 func TestMontgomeryLadderModExp(t *testing.T) {
 	check(t, 0, 0, 1)
 	check(t, 0, 1, 1)
+	check(t, 0, 2, 1)
 	check(t, 1, 0, 1)
+	check(t, 2, 0, 1)
 	check(t, 2, 10, 1)
 	check(t, 4, 13, 1)
 	check(t, 13, 4, 1)
