@@ -1,4 +1,4 @@
-// DO NOT USE THIS CODE.
+// DO NOT USE THIS CODE. SERIOUSLY.
 package snakes
 
 import (
